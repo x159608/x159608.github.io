@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - 混世大魔王</title>
+    <title>hexo搭建个人博客 - 混世大魔王</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,"> 
+    <meta name="description" content="这个是我反复尝试、查阅资料后总结出的，为了能让你们更加快速的看到。
+目录第一步：删除因为是重新创建，所以要把之前的blog目录删掉。
+第二步：安装框架在hexo目录中打开Git Bash
+输入代码：,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="混世大魔王" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -35,7 +38,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">Hello World</h3>
+    <h3 class="subtitle">hexo搭建个人博客</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -53,26 +56,56 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">hexo搭建个人博客</h1>
         <div class="stuff">
             <span>十月 16, 2019</span>
             
 
         </div>
         <div class="content markdown">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>这个是我反复尝试、查阅资料后总结出的，为了能让你们更加快速的看到。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>第一步：删除<br>因为是重新创建，所以要把之前的blog目录删掉。</p>
+<p>第二步：安装框架<br>在hexo目录中打开Git Bash</p>
+<p>输入代码：npm install hexo-cli -g</p>
+<p>该过程根据电脑内存的不同可能会持续30s-60s，耐心等待</p>
+<p>第三步：创建blog<br>输入代码：hexo init blog</p>
+<p>该过程也是会持续一段时间</p>
+<p>第四步：切换目录<br>输入代码：cd blog</p>
+<p>查看是否切换</p>
+<p>第五步：安装组件<br>输入代码：npm install</p>
+<p>第六步：生成静态页面<br>输入代码：hexo g</p>
+<p>第七步：启动本地服务器<br>输入代码：hexo s</p>
+<p>然后在浏览器输入网址：localhost:4000</p>
+<p>这只是本地博客，下面配置远端博客</p>
+<p>在命令界面按Ctrl+C结束本地服务器</p>
+<p>第八步：布置deployer目录<br>输入代码：npm install –save hexo-deployer-git</p>
+<p>该过程需要一段时间的加载，耐心等待！</p>
+<p>第九步：修改_config.yml文件<br>打开hexo根目录下的_config.yml文件，修改其deploy标签的内容(应该在最下面)</p>
+<p>repo后面的Frightings修改成你们自己的名字！冒号后面跟个空格！</p>
+<p>修改后输入代码：hexo clean清理缓存，</p>
+<p>然后输入代码：hexo g重新布置静态页面。</p>
+<p>第十步：布置远端博客<br>输入代码：hexo d</p>
+<p>然后他会让你告诉他，你是谁~（Please tell me who you are）</p>
+<p>接着咱们就告诉他，咱是谁~</p>
+<p>输入代码：git config –global user.email “<a href="mailto:youremail@qq.com" target="_blank" rel="noopener">youremail@qq.com</a>“</p>
+<p>注意！ 这边<a href="mailto:youremail@qq.com" target="_blank" rel="noopener">youremail@qq.com</a>不是让你照搬抄上！是让你写上你自己的邮箱！</p>
+<p>接着输入代码：git config –global user.name “yourname”</p>
+<p>同样，这边yourname不是让你照搬抄上！是让你写上你自己的用户名。</p>
+<p>然后依次输入代码:hexo clean清理下缓存，</p>
+<p>hexo g生成静态页面，hexo d布置远端。</p>
+<p>第十一步：查看效果<br>然后在网站中输入你的博客地址yourname.github.io就会出现你的博客。</p>
+<p>第十二步：写博客<br>输入代码：hexo new “我的第一篇博客”</p>
+<p>这上面写出了你的博客路径，找到他进行编辑。</p>
+<p>打开后：</p>
+<p>上面有个tags标签,目前没什么用，先删除，要不然可能会编译错误。</p>
+<p>编辑完之后：</p>
+<p>第十三步：查看效果<br>十二步完成后，依次输入代码：hexo clean清理缓存，</p>
+<p>输入代码：hexo g生成静态页面，</p>
+<p>可以发现里面的INFO项中加载了自己写的博客。</p>
+<p>输入代码：hexo d 缓存到GitHub。</p>
+<p>然后再刷新一下自己的博客地址，可以发现自己写的博客已经显示了。</p>
+<p>如果需要继续添加文章，也是相同的步骤和代码。</p>
+<p>赏</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
