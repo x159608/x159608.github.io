@@ -10,14 +10,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="#第一章：什么是面向对象
-概念：
+    <meta name="description" content="第一章：什么是面向对象概念：
 
 面向对象就是把一个项目，一个事情分成更小的项目，或者说分成一个个更小的部分，每一部分负责什么方面的功能，最后再由这些部分组合而成为一个整体。
 
 好处：
 
-面相对象,"> 
+面相对象更接,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="混世大魔王" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -67,8 +66,7 @@
 
         </div>
         <div class="content markdown">
-            <p>#第一章：什么是面向对象</p>
-<p>概念：</p>
+            <h3 id="第一章：什么是面向对象"><a href="#第一章：什么是面向对象" class="headerlink" title="第一章：什么是面向对象"></a>第一章：什么是面向对象</h3><p>概念：</p>
 <blockquote>
 <p>面向对象就是把一个项目，一个事情分成更小的项目，或者说分成一个个更小的部分，每一部分负责什么方面的功能，最后再由这些部分组合而成为一个整体。</p>
 </blockquote>
@@ -79,8 +77,7 @@
 <blockquote>
 <p>如何使用：通常是创建类的对象再给属性赋值。</p>
 </blockquote>
-<p>#第二章：类和对象的创建</p>
-<p>类的创建：</p>
+<h3 id="第二章：类和对象的创建"><a href="#第二章：类和对象的创建" class="headerlink" title="第二章：类和对象的创建"></a>第二章：类和对象的创建</h3><p>类的创建：</p>
 <pre><code>public class 类名{}</code></pre><p>对象的创建：</p>
 <pre><code>类名 变量名 = new 类名();</code></pre><p>构造方法：</p>
 <blockquote>
@@ -91,11 +88,10 @@
 <p>方法名相同，参数列表不同，这是构造方法的重载。</p>
 </blockquote>
 <p>如果一个类中包含了两个或两个以上的方法，他们方法名相同，方法参数个数或者参数类型不同，则称该方法被重载了，这个过程是方法重载。</p>
-<p>##Static：</p>
-<blockquote>
+<h4 id="Static："><a href="#Static：" class="headerlink" title="Static："></a>Static：</h4><blockquote>
 <p>可以用来修饰属性，方法和代码块，静态方法中不能使用this和super关键字。</p>
 </blockquote>
-<p>#第三章：封装<br>概念：</p>
+<h3 id="第三章：封装"><a href="#第三章：封装" class="headerlink" title="第三章：封装"></a>第三章：封装</h3><p>概念：</p>
 <blockquote>
 <p>封装指的是将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现对内部信息的操作访问。</p>
 </blockquote>
@@ -103,12 +99,11 @@
 <blockquote>
 <p>提高了安全性、提高了复用性、提高了实现细节。</p>
 </blockquote>
-<p>注意事项：</p>
+<p>​    注意事项：</p>
 <blockquote>
 <p>类的属性中均用private来修饰，定义get和set方法。</p>
 </blockquote>
-<p>#第四章：继承</p>
-<blockquote>
+<h3 id="第四章：继承"><a href="#第四章：继承" class="headerlink" title="第四章：继承"></a>第四章：继承</h3><blockquote>
 <p>概念：比如FeiGe快递系统中有三个实体类Person，Courier, Customer类，Courier, Customer都属于Person，所以都继承自Person类。</p>
 </blockquote>
 <blockquote>
@@ -117,33 +112,33 @@
 <blockquote>
 <p>语法：</p>
 </blockquote>
-<pre><code>    public class 类名 extends 父类{
-    //属性定义
-    //方法定义
-}</code></pre><p>注意事项：</p>
+<pre><code>public class 类名 extends 父类{
+//属性定义
+//方法定义
+}</code></pre><p>​    注意事项：</p>
 <blockquote>
 <p>1.子类继承父类所有的属性和方法，但是不能调用Private修饰的属性和方法。</p>
 </blockquote>
 <blockquote>
 <p>2..java中的继承只支持单继承，意思是一个子类只能继承一个父类，但是允许多层继承。</p>
 </blockquote>
-<p>继承中的构造方法：</p>
+<p>​    继承中的构造方法：</p>
 <blockquote>
 <p>调用父类中的构造方法，需用到关键字super, super指代父类。</p>
 </blockquote>
-<p>重写的概念：</p>
+<p>​    重写的概念：</p>
 <blockquote>
 <p>在继承的关系中，子类会自动继承父类中定义的方法，但有时子类中需要对继承的方法进行一些内容上的修改，即对父类的方法进行重写。</p>
 </blockquote>
-<p>重写注意事项：</p>
+<p>​    重写注意事项：</p>
 <blockquote>
 <p>子类重写父类的方法时，不能使用比父类中被重写的方法更严格的访问权限，重写方法和被重写方法必须具有相同的方法名，相同的参数列表和相同的返回值类型，重写方法的访问修饰符必须大于被重写方法的访问修饰符，否则就不能被称为方法的重写。</p>
 </blockquote>
-<p>异常处理：</p>
+<p>​    异常处理：</p>
 <blockquote>
 <p>在程序执行代码的时候万一发生了异常，程序会按照预定的处理方法对异常进行处理，异常处理完毕之后，程序继续运行。<br>语法：<br>      5个关键字 try , catch, finally, throw, throws.</p>
 </blockquote>
-<p>常见的异常类型：</p>
+<p>​    常见的异常类型：</p>
 <pre><code>Exception 异常层次的根类
 ArithmeticException 算术错误情形，如以零作除数
 ArrayIndexOutOfBoundsException 数组下标越界
@@ -152,7 +147,7 @@ ClassNotFoundException 不能加载所需的类
 InputMismatchException 得到的数据类型与实际输入的类型不匹配
 llegalArgumentException 方法接收到非法参数
 ClassCastException 对象强制类型转换出错
-NumberFormatException 数字格式转换异常，如把“abc”转换成数字</code></pre><p>#第五章：多态<br>概念：</p>
+NumberFormatException 数字格式转换异常，如把“abc”转换成数字</code></pre><h3 id="第五章：多态"><a href="#第五章：多态" class="headerlink" title="第五章：多态"></a>第五章：多态</h3><p>概念：</p>
 <blockquote>
 <p>指允许不同类的对象对同一消息做出响应即同同一消息可以根据发送对象的不同而采用多种不同的行为方式。</p>
 </blockquote>
@@ -175,7 +170,7 @@ NumberFormatException 数字格式转换异常，如把“abc”转换成数字<
 <blockquote>
 <p>一段代码会出现多种异常这时可以在try语句后写多个catch语句块。</p>
 </blockquote>
-<p>#第六章：抽象<br>概念：</p>
+<h3 id="第六章：抽象"><a href="#第六章：抽象" class="headerlink" title="第六章：抽象"></a>第六章：抽象</h3><p>概念：</p>
 <blockquote>
 <p>如果一个类没有足够的信息去描述一个具体的对象那我们就称之为抽象类</p>
 </blockquote>
@@ -197,21 +192,17 @@ NumberFormatException 数字格式转换异常，如把“abc”转换成数字<
 <blockquote>
 <p>被final修饰过的类不能被继承，因为不能被继承所以此类中所有方法都是final修饰，该类如果不需要有子类，不需要被扩展，类的方法不允许被重写就用final修饰该类。</p>
 </blockquote>
-<p>#第七章：接口<br>概念：</p>
+<h3 id="第七章：接口"><a href="#第七章：接口" class="headerlink" title="第七章：接口"></a>第七章：接口</h3><p>概念：</p>
 <blockquote>
 <p>在软件中接口是一种规范和标准，他们可以约束类的行为，是一些方法特征的集合，但是没有方法的实现。</p>
 </blockquote>
 <p>语法：</p>
-<pre><code> public interface 接口名{
-    //常量定义
-    //方法定义
-    }
-或者
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123;</span><br><span class="line">   //常量定义</span><br><span class="line">   //方法定义</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
-        public interface 接口名 extends 父接口1, 父接口2...{
-        //常量定义
-        //方法定义
-    }</code></pre><blockquote>
+<pre><code> public interface 接口名 extends 父接口1, 父接口2...{
+ //常量定义
+ //方法定义
+}</code></pre><blockquote>
 <p>注意事项：接口可以多继承，类也可以实现多个接口，如果该类已经继承了父类那么implements要写在后面，类实现接口后，必须要重写接口中的方法。</p>
 </blockquote>
 <blockquote>
@@ -222,15 +213,14 @@ NumberFormatException 数字格式转换异常，如把“abc”转换成数字<
 }</code></pre><blockquote>
 <p>抛出异常：throw 除系统自动抛出异常可以用throw自动抛出异常，throw在程序中抛出异常，throws在方法内抛出异常。</p>
 </blockquote>
-<p>第八章：集合框架</p>
-<blockquote>
+<h3 id="第八章：集合框架"><a href="#第八章：集合框架" class="headerlink" title="第八章：集合框架"></a>第八章：集合框架</h3><blockquote>
 <p>集合框架的特点：</p>
 </blockquote>
 <blockquote>
 <p>长度：数组长度是固定的，集合长度是可变的。</p>
 </blockquote>
 <blockquote>
-<p>储存对象： 数组可以存储基本的数据类型，也可以存储对象的引用，集合只能用于存储对象的引用。</p>
+<p>储存对象：数组可以存储基本的数据类型，也可以存储对象的引用，集合只能用于存储对象的引用。</p>
 </blockquote>
 <blockquote>
 <p>对象类型： 数组必须是相同类型的数据 ，集合对象可以是不同类型。</p>
