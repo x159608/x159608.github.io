@@ -1,38 +1,210 @@
-extends includes/layout.pug
+<html>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
 
-block content
-    article#post
-        .post-header
-            .title= page.title
-            .container
-                time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.posted')] #[=date(page['date'], config.date_format)] | #[=__('post.modified')] #[=date(page['updated'], config.date_format)]
-                //time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]
-                .button-hover.categories
-                    each categories,index in page.categories.data
-                        i.fa.fa-inbox.article-icon(aria-hidden="true")
-                        a.link-a(href=url_for(categories.path)) #[=categories.name]
-                        if(index < page.categories.data.length - 1)
-                            i.fa.fa-angle-right(style="margin: 0 8px;")
-                .button-hover.tags
-                    each tags,index in page.tags.data
-                        i.fa.fa-tag.article-icon(aria-hidden="true")
-                        a.link-a(href=url_for(tags.path)) #[=tags.name]
-                        if(index < page.tags.data.length - 1)
-                            span &nbsp;|&nbsp;
-        .main-content!= page.content
-        if (theme.post_copyright && theme.post_copyright.enable)
-            .post-copyright
-                .post-copyright-author
-                    span.post-copyright-meta= _p('post.copyright.author') + ": "
-                    span.post-copyright-info
-                        - let mailto = `mailto:${config.email}`
-                        a(href=mailto) #[=config.author]
-                .post-copyright-type
-                    span.post-copyright-meta= _p('post.copyright.link') + ": "
-                    span.post-copyright-info
-                        a(href=url_for(page.permalink)) #[=page.permalink]
-                .post-copyright-notice
-                    span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
-                    span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
-    include includes/pagination.pug
-    //div!= paginator()
+  
+  <title>
+    混世大魔王 -
+    
+  </title>
+  
+
+
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <meta property="og:title" content="混世大魔王">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="混世大魔王">
+  <meta property="og:image" content="http://yoursite.com/img/default.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content>
+  <meta name="twitter:title" content="混世大魔王">
+
+  <meta name="twitter:image" content="http://yoursite.com/img/default.jpg">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/./css/style.css">
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+  <div class="container">
+    <a class="navbar-brand logo" href="http://yoursite.com">
+      混世大魔王</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item item">
+          
+        <li class="nav-item item">
+          <a class="nav-link" href="/">
+            Home</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="/archives">
+            🗂️Archives</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="https://hexo.io/">
+            Hexo</a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <main class="page main-page">
+        <div class="container blogPost">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="blog-post-title">
+                
+            </h2>
+            <p class="meta"><i class="far fa-clock"></i>
+                2019-10-16
+                
+            </p>
+            <!-- Content -->
+            <p>目录<br>第一步：删除<br>因为是重新创建，所以要把之前的blog目录删掉。</p>
+<p>第二步：安装框架<br>在hexo目录中打开Git Bash</p>
+<p>输入代码：npm install hexo-cli -g</p>
+<p>该过程根据电脑内存的不同可能会持续30s-60s，耐心等待</p>
+<p>第三步：创建blog<br>输入代码：hexo init blog</p>
+<p>该过程也是会持续一段时间</p>
+<p>第四步：切换目录<br>输入代码：cd blog</p>
+<p>查看是否切换</p>
+<p>第五步：安装组件<br>输入代码：npm install</p>
+<p>第六步：生成静态页面<br>输入代码：hexo g</p>
+<p>第七步：启动本地服务器<br>输入代码：hexo s</p>
+<p>然后在浏览器输入网址：localhost:4000</p>
+<p>这只是本地博客，下面配置远端博客</p>
+<p>在命令界面按Ctrl+C结束本地服务器</p>
+<p>第八步：布置deployer目录<br>输入代码：npm install –save hexo-deployer-git</p>
+<p>该过程需要一段时间的加载，耐心等待！</p>
+<p>第九步：修改_config.yml文件<br>打开hexo根目录下的_config.yml文件，修改其deploy标签的内容(应该在最下面)</p>
+<p>repo后面的Frightings修改成你们自己的名字！冒号后面跟个空格！</p>
+<p>修改后输入代码：hexo clean清理缓存，</p>
+<p>然后输入代码：hexo g重新布置静态页面。</p>
+<p>第十步：布置远端博客<br>输入代码：hexo d</p>
+<p>然后他会让你告诉他，你是谁~（Please tell me who you are）</p>
+<p>接着咱们就告诉他，咱是谁~</p>
+<p>输入代码：git config –global user.email “<a href="mailto:youremail@qq.com" target="_blank" rel="noopener">youremail@qq.com</a>“</p>
+<p>注意！ 这边<a href="mailto:youremail@qq.com" target="_blank" rel="noopener">youremail@qq.com</a>不是让你照搬抄上！是让你写上你自己的邮箱！</p>
+<p>接着输入代码：git config –global user.name “yourname”</p>
+<p>同样，这边yourname不是让你照搬抄上！是让你写上你自己的用户名。</p>
+<p>然后依次输入代码:hexo clean清理下缓存，</p>
+<p>hexo g生成静态页面，hexo d布置远端。</p>
+<p>第十一步：查看效果<br>然后在网站中输入你的博客地址yourname.github.io就会出现你的博客。</p>
+<p>第十二步：写博客<br>输入代码：hexo new “我的第一篇博客”</p>
+<p>这上面写出了你的博客路径，找到他进行编辑。</p>
+<p>打开后：</p>
+<p>上面有个tags标签,目前没什么用，先删除，要不然可能会编译错误。</p>
+<p>编辑完之后：</p>
+<p>第十三步：查看效果<br>十二步完成后，依次输入代码：hexo clean清理缓存，</p>
+<p>输入代码：hexo g生成静态页面，</p>
+<p>可以发现里面的INFO项中加载了自己写的博客。</p>
+<p>输入代码：hexo d 缓存到GitHub。</p>
+<p>然后再刷新一下自己的博客地址，可以发现自己写的博客已经显示了。</p>
+<p>如果需要继续添加文章，也是相同的步骤和代码。</p>
+
+            <br />
+            <p class="meta">
+                
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            
+
+<span><b>
+        TL;DR</b></span>
+<p>
+    Yet another hexo theme.
+</p>
+<hr />
+
+
+<span><b>
+        TL;DR 2</b></span>
+<p>
+    No, not another one :/
+</p>
+<hr />
+
+
+
+
+
+
+<span><a href="https://twitter.com/hexojs" target="_blank" rel="noopener"><b><i class="fab fa-twitter-square"></i>
+            <i class="fas fa-at"></i>
+            hexojs</b></a></span>
+<br />
+<a class="twitter-timeline" data-height="800" data-dnt="true" data-chrome="nofooter transparent noheader noborders "
+    href="https://twitter.com/hexojs?ref_src=twsrc%5Etfw"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+</div>
+<!-- Menu fade on scroll -->
+<script>
+    var isScrolling;
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#navbar").slideDown();
+            } else {
+                $("#navbar").slideUp();
+            }
+            prevScrollpos = currentScrollPos;
+        }, 66);
+    }, false);
+</script>
+
+
+<a class="float-right gradient btn paginationbtn" href="/2019/10/16/JAVA面向对象知识点总结/"><i class="fas fa-chevron-right"></i></a>
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+  <div class="container">
+    <div class="social-icons">
+      
+      <a href="https://hexo.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      
+      <a href="https://twitter.com/hexojs" title="@hexojs" target="_blank" rel="noopener" class="fab fa-twitter"></a>
+      
+      <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
+      
+    </div>
+  </div>
+</footer>
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
