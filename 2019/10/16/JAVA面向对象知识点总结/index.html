@@ -80,8 +80,7 @@
                 
             </p>
             <!-- Content -->
-            <hr>
-<h1 id="title-：-JAVA面向对象知识点总结"><a href="#title-：-JAVA面向对象知识点总结" class="headerlink" title="title ： JAVA面向对象知识点总结"></a>title ： JAVA面向对象知识点总结</h1><hr>
+            <h1 id="JAVA面向对象知识点总结"><a href="#JAVA面向对象知识点总结" class="headerlink" title="JAVA面向对象知识点总结"></a>JAVA面向对象知识点总结</h1><hr>
 <h3 id="第一章：什么是面向对象"><a href="#第一章：什么是面向对象" class="headerlink" title="第一章：什么是面向对象"></a>第一章：什么是面向对象</h3><p>概念：</p>
 <blockquote>
 <p>面向对象就是把一个项目，一个事情分成更小的项目，或者说分成一个个更小的部分，每一部分负责什么方面的功能，最后再由这些部分组合而成为一个整体。</p>
@@ -89,20 +88,15 @@
 <p>好处：</p>
 <blockquote>
 <p>面相对象更接近实物的本质，提高代码的复用更具有扩展性。</p>
-</blockquote>
-<blockquote>
 <p>如何使用：通常是创建类的对象再给属性赋值。</p>
 </blockquote>
 <h3 id="第二章：类和对象的创建"><a href="#第二章：类和对象的创建" class="headerlink" title="第二章：类和对象的创建"></a>第二章：类和对象的创建</h3><p>类的创建：</p>
 <pre><code>public class 类名{}</code></pre><p>对象的创建：</p>
-<pre><code>类名 变量名 = new 类名();</code></pre><p>构造方法：</p>
-<blockquote>
-<p>构造方法的名称和类名相同，没有返回值类型。</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 变量名 = new 类名();</span><br></pre></td></tr></table></figure>
+
+<p>构造方法：构造方法的名称和类名相同，没有返回值类型。</p>
 <pre><code>public 类名(){}</code></pre><p>构造方法的重载：</p>
-<blockquote>
 <p>方法名相同，参数列表不同，这是构造方法的重载。</p>
-</blockquote>
 <p>如果一个类中包含了两个或两个以上的方法，他们方法名相同，方法参数个数或者参数类型不同，则称该方法被重载了，这个过程是方法重载。</p>
 <h4 id="Static："><a href="#Static：" class="headerlink" title="Static："></a>Static：</h4><blockquote>
 <p>可以用来修饰属性，方法和代码块，静态方法中不能使用this和super关键字。</p>
@@ -112,47 +106,41 @@
 <p>封装指的是将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现对内部信息的操作访问。</p>
 </blockquote>
 <p>好处：</p>
-<blockquote>
 <p>提高了安全性、提高了复用性、提高了实现细节。</p>
-</blockquote>
-<p>​    注意事项：</p>
-<blockquote>
+<p>注意事项：</p>
 <p>类的属性中均用private来修饰，定义get和set方法。</p>
-</blockquote>
 <h3 id="第四章：继承"><a href="#第四章：继承" class="headerlink" title="第四章：继承"></a>第四章：继承</h3><blockquote>
 <p>概念：比如FeiGe快递系统中有三个实体类Person，Courier, Customer类，Courier, Customer都属于Person，所以都继承自Person类。</p>
-</blockquote>
-<blockquote>
 <p>好处：提高了代码的重用性，提高了代码的扩展性。</p>
 </blockquote>
-<blockquote>
 <p>语法：</p>
-</blockquote>
 <pre><code>public class 类名 extends 父类{
 //属性定义
 //方法定义
 }</code></pre><p>​    注意事项：</p>
 <blockquote>
 <p>1.子类继承父类所有的属性和方法，但是不能调用Private修饰的属性和方法。</p>
-</blockquote>
-<blockquote>
 <p>2..java中的继承只支持单继承，意思是一个子类只能继承一个父类，但是允许多层继承。</p>
 </blockquote>
 <p>​    继承中的构造方法：</p>
 <blockquote>
 <p>调用父类中的构造方法，需用到关键字super, super指代父类。</p>
 </blockquote>
-<p>​    重写的概念：</p>
+<p>重写的概念：</p>
 <blockquote>
 <p>在继承的关系中，子类会自动继承父类中定义的方法，但有时子类中需要对继承的方法进行一些内容上的修改，即对父类的方法进行重写。</p>
 </blockquote>
-<p>​    重写注意事项：</p>
+<p>重写注意事项：</p>
 <blockquote>
 <p>子类重写父类的方法时，不能使用比父类中被重写的方法更严格的访问权限，重写方法和被重写方法必须具有相同的方法名，相同的参数列表和相同的返回值类型，重写方法的访问修饰符必须大于被重写方法的访问修饰符，否则就不能被称为方法的重写。</p>
 </blockquote>
 <p>​    异常处理：</p>
 <blockquote>
-<p>在程序执行代码的时候万一发生了异常，程序会按照预定的处理方法对异常进行处理，异常处理完毕之后，程序继续运行。<br>语法：<br>      5个关键字 try , catch, finally, throw, throws.</p>
+<p>在程序执行代码的时候万一发生了异常，程序会按照预定的处理方法对异常进行处理，异常处理完毕之后，程序继续运行</p>
+</blockquote>
+<p>语法：</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;5个关键字 try , catch, finally, throw, throws.</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>​    常见的异常类型：</p>
 <pre><code>Exception 异常层次的根类
@@ -221,14 +209,11 @@ NumberFormatException 数字格式转换异常，如把“abc”转换成数字<
 }</code></pre><blockquote>
 <p>注意事项：接口可以多继承，类也可以实现多个接口，如果该类已经继承了父类那么implements要写在后面，类实现接口后，必须要重写接口中的方法。</p>
 </blockquote>
-<blockquote>
 <p>接口的实现：</p>
-</blockquote>
 <pre><code> public class extends 父类 implements 接口1, 接口2...{
       //重写接口方法
-}</code></pre><blockquote>
-<p>抛出异常：throw 除系统自动抛出异常可以用throw自动抛出异常，throw在程序中抛出异常，throws在方法内抛出异常。</p>
-</blockquote>
+}</code></pre><p>抛出异常：</p>
+<p>throw 除系统自动抛出异常可以用throw自动抛出异常，throw在程序中抛出异常，throws在方法内抛出异常。</p>
 <h3 id="第八章：集合框架"><a href="#第八章：集合框架" class="headerlink" title="第八章：集合框架"></a>第八章：集合框架</h3><blockquote>
 <p>集合框架的特点：</p>
 </blockquote>
@@ -242,18 +227,14 @@ NumberFormatException 数字格式转换异常，如把“abc”转换成数字<
 <p>对象类型： 数组必须是相同类型的数据 ，集合对象可以是不同类型。</p>
 </blockquote>
 <p>接口的区别：</p>
-<blockquote>
 <p>Collection接口存储组，不唯一(允许重复)、 无序的对象。</p>
-</blockquote>
-<blockquote>
 <p>Set接口继承Collection接口，存储-组唯一(不允许重复)、 无序的对象。</p>
-</blockquote>
-<blockquote>
 <p>List接口继承Collection接口，存储组不唯-(允许重复)、 有序(以元素插入的次序来放置无素，不会重新排列)的对象。</p>
-</blockquote>
 <blockquote>
-<p>Map接口存储组成对的键 值对象，提供key(键)到value(值)的映射。Map中的key不要求有序，不允许重复。value 同样不要求有序，但允许重复。<br>List接口：<br>实现List接口的常用类有ArayList和Lnkedist.它们都可以容纳所有类型的对象，包括null允许重复，并且都保证元素的存储顺序。</p>
+<p>Map接口存储组成对的键 值对象，提供key(键)到value(值)的映射。Map中的key不要求有序，不允许重复。value 同样不要求有序，但允许重复。</p>
 </blockquote>
+<p>List接口：</p>
+<p>实现List接口的常用类有ArayList和Lnkedist.它们都可以容纳所有类型的对象，包括null允许重复，并且都保证元素的存储顺序。</p>
 <p>ArrayList和LinkedList的大致区别：</p>
 <blockquote>
 <p>arraylist是实现了基于动态数组的数据结构，LinkedList基于链表的数据结构对于随机访问get和set, ArrayList 优于LinkedList, 因为LinkedList要移动指针。对于新增和删除操作add和remove, LinkedList 比较占优势，因为ArrayList要移动数据。</p>
@@ -264,23 +245,11 @@ NumberFormatException 数字格式转换异常，如把“abc”转换成数字<
 </blockquote>
 <pre><code>int size()返回列表中的元素个数。</code></pre><blockquote>
 <p>void add(int index,Objecto)在指定的索引位置添加元素，原索引位置及其后面的元素依次后移。</p>
-</blockquote>
-<blockquote>
 <p>注意：新添加元素的索引位置必须介于0和列表中元素个数之间。</p>
-</blockquote>
-<blockquote>
 <p>object get(int index)返回指定索引位置处的元素。</p>
-</blockquote>
-<blockquote>
 <p>注意：取出的元素是object类型，使用前需要进行强制类型转换。</p>
-</blockquote>
-<blockquote>
 <p>boolean contains(Object o)判断列表中是否存在指定元素。</p>
-</blockquote>
-<blockquote>
 <p>boolean remove(Object o)从列表中删除元素。</p>
-</blockquote>
-<blockquote>
 <p>object remove(int index)从列表中删除指定位置元素，起始索引位置从0开始。</p>
 </blockquote>
 <p>Linkedlist的一些特殊用法：</p>
@@ -291,20 +260,17 @@ object getLast()返回列表中的最后一个元素。
 object removeFirst()删除并返回列表中的第一个元素。</code></pre><p>Set接口：</p>
 <blockquote>
 <p>Hashset的优点就是各方面都很快但数据是无序的。</p>
-</blockquote>
-<blockquote>
 <p>Threeset优点是有序而且可以按照升序方式进行排序，但是其他各方面不突出。</p>
 </blockquote>
 <p>**Map接口的一些常用方法：</p>
 <blockquote>
 <p>object put (object key，object value)以“键一值对”的方式进行存储如果试图添加重复的键，那么最后加入的“键-值对”将替换掉原先的“键-值对”。</p>
-</blockquote>
-<blockquote>
 <p>object get (Object key)根据键返回相关联的值，若不存在指定的键，则返回null。</p>
 </blockquote>
 <blockquote>
-<p>object remove (Object key)删除指定的键映射的“键一值对”。<br>      int size()返回元素个数。<br>      set keySet()返回键的集合。<br>      collection values()返回值的集合。<br>      boolean containsKey (Object key)若存在指定的键映射的“键值对”，则返回true。<br>      boolean isEmpty()若不存在键一值映射关系，则返回true。<br>      void clear()从此映射中移除所有映射关系。<br>泛型：</p>
+<p>object remove (Object key)删除指定的键映射的“键一值对”。<br>      int size()返回元素个数。<br>      set keySet()返回键的集合。<br>      collection values()返回值的集合。<br>      boolean containsKey (Object key)若存在指定的键映射的“键值对”，则返回true。<br>      boolean isEmpty()若不存在键一值映射关系，则返回true。<br>      void clear()从此映射中移除所有映射关系。</p>
 </blockquote>
+<p>泛型：</p>
 <pre><code>ArrayList&lt;0bject&gt; list = new ArrayList&lt;0bject&gt;();
 Map map&lt;Object,Object&gt; = new HashMap&lt;Object,Object&gt;();
 ArrayList&lt;Map&lt;Object,Object&gt;&gt; list = new ArrayList&lt;Map&lt;Object,Object&gt;&gt;();</code></pre>
