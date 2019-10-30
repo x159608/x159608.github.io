@@ -1,0 +1,208 @@
+<html>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+
+  
+  <title>
+    混世大魔王 -
+    
+  </title>
+  
+
+
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <meta property="og:title" content="混世大魔王">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="混世大魔王">
+  <meta property="og:image" content="http://yoursite.com/img/default.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content>
+  <meta name="twitter:title" content="混世大魔王">
+
+  <meta name="twitter:image" content="http://yoursite.com/img/default.jpg">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/./css/style.css">
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+  <div class="container">
+    <a class="navbar-brand logo" href="http://yoursite.com">
+      混世大魔王</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item item">
+          
+        <li class="nav-item item">
+          <a class="nav-link" href="/">
+            Home</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="/archives">
+            🗂️Archives</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="https://hexo.io/">
+            Hexo</a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <main class="page main-page">
+        <div class="container blogPost">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="blog-post-title">
+                
+            </h2>
+            <p class="meta"><i class="far fa-clock"></i>
+                2019-10-30
+                
+            </p>
+            <!-- Content -->
+            <h1 id="Java-Scanner-类"><a href="#Java-Scanner-类" class="headerlink" title="Java Scanner 类"></a>Java Scanner 类</h1><p>java.util.Scanner 是 Java5 的新特征，我们可以通过 Scanner 类来获取用户的输入。</p>
+<p>下面是创建 Scanner 对象的基本语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner s = new Scanner(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>接下来我们演示一个最简单的数据输入，并通过 Scanner 类的 next() 与 nextLine() 方法获取输入的字符串，在读取前我们一般需要 使用 hasNext 与 hasNextLine 判断是否还有输入的数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class ScannerDemo &#123; </span><br><span class="line">public static void main(String[] args) &#123;   </span><br><span class="line">	Scanner scan = new Scanner(System.in);        </span><br><span class="line">	// 从键盘接收数据     </span><br><span class="line">    </span><br><span class="line">	// next方式接收字符串        </span><br><span class="line">	System.out.println(&quot;next方式接收：&quot;);     </span><br><span class="line">    </span><br><span class="line">    // 判断是否还有输入    </span><br><span class="line">    if (scan.hasNext()) &#123;       </span><br><span class="line">    </span><br><span class="line">    String str1 = scan.next();      </span><br><span class="line">    System.out.println(&quot;输入的数据为：&quot; + str1);  </span><br><span class="line">    &#125;       </span><br><span class="line">    scan.close();  </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行以上程序输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ javac ScannerDemo.java</span><br><span class="line">$ java ScannerDemo</span><br><span class="line">next方式接收：</span><br><span class="line">runoob com</span><br><span class="line">输入的数据为：runoob</span><br></pre></td></tr></table></figure>
+
+<p>可以看到 com 字符串并未输出，接下来我们看 nextLine。</p>
+<h3 id="使用-nextLine-方法："><a href="#使用-nextLine-方法：" class="headerlink" title="使用 nextLine 方法："></a>使用 nextLine 方法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner; public class ScannerDemo &#123;  </span><br><span class="line">public static void main(String[] args) &#123;   </span><br><span class="line">Scanner scan = new Scanner(System.in);    </span><br><span class="line">// 从键盘接收数据  </span><br><span class="line"></span><br><span class="line">// nextLine方式接收字符串      </span><br><span class="line">System.out.println(&quot;nextLine方式接收：&quot;);    </span><br><span class="line">// 判断是否还有输入       </span><br><span class="line">if (scan.hasNextLine()) </span><br><span class="line">&#123;            </span><br><span class="line">String str2 = scan.nextLine();     </span><br><span class="line">System.out.println(&quot;输入的数据为：&quot; + str2);   </span><br><span class="line">&#125;      </span><br><span class="line">scan.close();  </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行以上程序输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ javac ScannerDemo.java</span><br><span class="line">$ java ScannerDemo</span><br><span class="line">nextLine方式接收：</span><br><span class="line">runoob com</span><br><span class="line">输入的数据为：runoob com</span><br></pre></td></tr></table></figure>
+
+<p>可以看到 com 字符串输出。</p>
+<h3 id="next-与-nextLine-区别"><a href="#next-与-nextLine-区别" class="headerlink" title="next() 与 nextLine() 区别"></a>next() 与 nextLine() 区别</h3><p>next():</p>
+<ul>
+<li>1、一定要读取到有效字符后才可以结束输入。</li>
+<li>2、对输入有效字符之前遇到的空白，next() 方法会自动将其去掉。</li>
+<li>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符。</li>
+<li>next() 不能得到带有空格的字符串。</li>
+</ul>
+<p>nextLine()：</p>
+<ul>
+<li>1、以Enter为结束符,也就是说 nextLine()方法返回的是输入回车之前的所有字符。</li>
+<li>2、可以获得空白。</li>
+</ul>
+<p>如果要输入 int 或 float 类型的数据，在 Scanner 类中也有支持，但是在输入之前最好先使用 hasNextXxx() 方法进行验证，再使用 nextXxx() 来读取：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class ScannerDemo &#123;  </span><br><span class="line">public static void main(String[] args) &#123;  </span><br><span class="line">Scanner scan = new Scanner(System.in);   </span><br><span class="line">// 从键盘接收数据      </span><br><span class="line">int i = 0;     </span><br><span class="line">float f = 0.0f;</span><br><span class="line">System.out.print(&quot;输入整数：&quot;);   </span><br><span class="line">if (scan.hasNextInt()) &#123;       </span><br><span class="line">// 判断输入的是否是整数 </span><br><span class="line">i = scan.nextInt();    </span><br><span class="line">// 接收整数         </span><br><span class="line">System.out.println(&quot;整数数据：&quot; + i);  </span><br><span class="line">&#125;</span><br><span class="line">else &#123;           </span><br><span class="line">// 输入错误的信息           </span><br><span class="line">System.out.println(&quot;输入的不是整数！&quot;);    </span><br><span class="line">&#125;     </span><br><span class="line">System.out.print(&quot;输入小数：&quot;);  </span><br><span class="line">if (scan.hasNextFloat()) &#123; </span><br><span class="line">// 判断输入的是否是小数      </span><br><span class="line">f = scan.nextFloat();    </span><br><span class="line">// 接收小数          </span><br><span class="line">System.out.println(&quot;小数数据：&quot; + f); </span><br><span class="line">&#125; else &#123;          </span><br><span class="line">// 输入错误的信息    </span><br><span class="line">System.out.println(&quot;输入的不是小数！&quot;); </span><br><span class="line">&#125;      </span><br><span class="line">scan.close();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行以上程序输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ javac ScannerDemo.java</span><br><span class="line">$ java ScannerDemo输入整数：</span><br><span class="line">12整数数据：</span><br><span class="line">12输入小数：</span><br><span class="line">1.2小数数据：</span><br><span class="line">1.2</span><br></pre></td></tr></table></figure>
+
+<p>以下实例我们可以输入多个数字，并求其总和与平均数，每输入一个数字用回车确认，通过输入非数字来结束输入并输出执行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">class ScannerDemo &#123;   </span><br><span class="line">public static void main(String[] args) &#123;   </span><br><span class="line">Scanner scan = new Scanner(System.in);  </span><br><span class="line">double sum = 0;    </span><br><span class="line">int m = 0;        </span><br><span class="line">while (scan.hasNextDouble()) &#123; </span><br><span class="line">double x = scan.nextDouble();  </span><br><span class="line">m = m + 1;      </span><br><span class="line">sum = sum + x;    </span><br><span class="line">&#125;     </span><br><span class="line">System.out.println(m + &quot;个数的和为&quot; + sum);   </span><br><span class="line">System.out.println(m + &quot;个数的平均值是&quot; + (sum / m));  </span><br><span class="line">scan.close();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行以上程序输出结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ javac ScannerDemo.java</span><br><span class="line">$ java ScannerDemo</span><br><span class="line">12</span><br><span class="line">23</span><br><span class="line">15</span><br><span class="line">21.4</span><br><span class="line">end</span><br><span class="line">4个数的和为71.4</span><br><span class="line">4个数的平均值是17.85</span><br></pre></td></tr></table></figure>
+            <br />
+            <p class="meta">
+                
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            
+
+<span><b>
+        TL;DR</b></span>
+<p>
+    Yet another hexo theme.
+</p>
+<hr />
+
+
+<span><b>
+        TL;DR 2</b></span>
+<p>
+    No, not another one :/
+</p>
+<hr />
+
+
+
+
+
+
+<span><a href="https://twitter.com/hexojs" target="_blank" rel="noopener"><b><i class="fab fa-twitter-square"></i>
+            <i class="fas fa-at"></i>
+            hexojs</b></a></span>
+<br />
+<a class="twitter-timeline" data-height="800" data-dnt="true" data-chrome="nofooter transparent noheader noborders "
+    href="https://twitter.com/hexojs?ref_src=twsrc%5Etfw"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+</div>
+<!-- Menu fade on scroll -->
+<script>
+    var isScrolling;
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#navbar").slideDown();
+            } else {
+                $("#navbar").slideUp();
+            }
+            prevScrollpos = currentScrollPos;
+        }, 66);
+    }, false);
+</script>
+
+<a class="float-left gradient btn paginationbtn" href="/2019/10/16/JAVA面向对象知识点总结/"><i class="fas fa-chevron-left"></i></a>
+
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+  <div class="container">
+    <div class="social-icons">
+      
+      <a href="https://hexo.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      
+      <a href="https://twitter.com/hexojs" title="@hexojs" target="_blank" rel="noopener" class="fab fa-twitter"></a>
+      
+      <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
+      
+    </div>
+  </div>
+</footer>
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
