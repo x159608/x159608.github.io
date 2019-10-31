@@ -81,44 +81,77 @@
             </p>
             <!-- Content -->
             <p>目录<br>第一步：删除<br>因为是重新创建，所以要把之前的blog目录删掉。</p>
-<p>第二步：安装框架<br>在hexo目录中打开Git Bash</p>
-<p>输入代码：npm install hexo-cli -g</p>
+<p>第二步：安装框架</p>
+<p>在hexo目录中打开Git Bash</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
 <p>该过程根据电脑内存的不同可能会持续30s-60s，耐心等待</p>
-<p>第三步：创建blog<br>输入代码：hexo init blog</p>
+<p>第三步：创建blog</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：hexo init blog</span><br></pre></td></tr></table></figure>
+
 <p>该过程也是会持续一段时间</p>
-<p>第四步：切换目录<br>输入代码：cd blog</p>
+<p>第四步：切换目录</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：cd blog</span><br></pre></td></tr></table></figure>
+
 <p>查看是否切换</p>
-<p>第五步：安装组件<br>输入代码：npm install</p>
-<p>第六步：生成静态页面<br>输入代码：hexo g</p>
-<p>第七步：启动本地服务器<br>输入代码：hexo s</p>
+<p>第五步：安装组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：npm install</span><br></pre></td></tr></table></figure>
+
+<p>第六步：生成静态页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：hexo g</span><br></pre></td></tr></table></figure>
+
+<p>第七步：启动本地服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：hexo s</span><br></pre></td></tr></table></figure>
+
 <p>然后在浏览器输入网址：localhost:4000</p>
 <p>这只是本地博客，下面配置远端博客</p>
 <p>在命令界面按Ctrl+C结束本地服务器</p>
-<p>第八步：布置deployer目录<br>输入代码：npm install –save hexo-deployer-git</p>
+<p>第八步：布置deployer目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
 <p>该过程需要一段时间的加载，耐心等待！</p>
 <p>第九步：修改_config.yml文件<br>打开hexo根目录下的_config.yml文件，修改其deploy标签的内容(应该在最下面)</p>
 <p>repo后面的Frightings修改成你们自己的名字！冒号后面跟个空格！</p>
 <p>修改后输入代码：hexo clean清理缓存，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
 <p>然后输入代码：hexo g重新布置静态页面。</p>
-<p>第十步：布置远端博客<br>输入代码：hexo d</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>第十步：布置远端博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：hexo d</span><br></pre></td></tr></table></figure>
+
 <p>然后他会让你告诉他，你是谁~（Please tell me who you are）</p>
 <p>接着咱们就告诉他，咱是谁~</p>
-<p>输入代码：git config –global user.email “<a href="mailto:youremail@qq.com" target="_blank" rel="noopener">youremail@qq.com</a>“</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：git config --global user.email &quot;youremail@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
 <p>注意！ 这边<a href="mailto:youremail@qq.com" target="_blank" rel="noopener">youremail@qq.com</a>不是让你照搬抄上！是让你写上你自己的邮箱！</p>
-<p>接着输入代码：git config –global user.name “yourname”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">接着输入代码：git config --global user.name &quot;yourname&quot;</span><br></pre></td></tr></table></figure>
+
 <p>同样，这边yourname不是让你照搬抄上！是让你写上你自己的用户名。</p>
-<p>然后依次输入代码:hexo clean清理下缓存，</p>
-<p>hexo g生成静态页面，hexo d布置远端。</p>
-<p>第十一步：查看效果<br>然后在网站中输入你的博客地址yourname.github.io就会出现你的博客。</p>
-<p>第十二步：写博客<br>输入代码：hexo new “我的第一篇博客”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">然后依次输入代码:hexo clean清理下缓存，</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g生成静态页面，hexo d布置远端。</span><br></pre></td></tr></table></figure>
+
+<p>第十一步：查看效果</p>
+<p>然后在网站中输入你的博客地址yourname.github.io就会出现你的博客。</p>
+<p>第十二步：写博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：hexo new &quot;我的第一篇博客&quot;</span><br></pre></td></tr></table></figure>
+
 <p>这上面写出了你的博客路径，找到他进行编辑。</p>
 <p>打开后：</p>
 <p>上面有个tags标签,目前没什么用，先删除，要不然可能会编译错误。</p>
 <p>编辑完之后：</p>
-<p>第十三步：查看效果<br>十二步完成后，依次输入代码：hexo clean清理缓存，</p>
-<p>输入代码：hexo g生成静态页面，</p>
+<p>第十三步：查看效果</p>
+<p>十二步完成后，依次输入代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean清理缓存，</span><br></pre></td></tr></table></figure>
+
+<p>输入代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g生成静态页面，</span><br></pre></td></tr></table></figure>
+
 <p>可以发现里面的INFO项中加载了自己写的博客。</p>
-<p>输入代码：hexo d 缓存到GitHub。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入代码：hexo d 缓存到GitHub。</span><br></pre></td></tr></table></figure>
+
 <p>然后再刷新一下自己的博客地址，可以发现自己写的博客已经显示了。</p>
 <p>如果需要继续添加文章，也是相同的步骤和代码。</p>
 
