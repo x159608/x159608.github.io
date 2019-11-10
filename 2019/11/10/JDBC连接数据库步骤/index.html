@@ -1,0 +1,181 @@
+<html>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+
+  
+  <title>
+    JDBC连接数据库步骤 |
+    混世大魔王
+  </title>
+  
+
+
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <meta property="og:title" content="JDBC连接数据库步骤">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="混世大魔王">
+  <meta property="og:image" content="http://yoursite.com/img/default.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content>
+  <meta name="twitter:title" content="JDBC连接数据库步骤">
+
+  <meta name="twitter:image" content="http://yoursite.com/img/default.jpg">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/./css/style.css">
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+  <div class="container">
+    <a class="navbar-brand logo" href="http://yoursite.com">
+      混世大魔王</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item item">
+          
+        <li class="nav-item item">
+          <a class="nav-link" href="/">
+            Home</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="/archives">
+            🗂️Archives</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="https://hexo.io/">
+            Hexo</a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <main class="page main-page">
+        <div class="container blogPost">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="blog-post-title">
+                JDBC连接数据库步骤
+            </h2>
+            <p class="meta"><i class="far fa-clock"></i>
+                2019-11-10
+                
+            </p>
+            <!-- Content -->
+            <h4 id="1-JAR包的引入"><a href="#1-JAR包的引入" class="headerlink" title="1.JAR包的引入"></a>1.JAR包的引入</h4><h5 id="（1）首先要百度下载一个jar包"><a href="#（1）首先要百度下载一个jar包" class="headerlink" title="（1）首先要百度下载一个jar包"></a>（1）首先要百度下载一个jar包</h5><h5 id="（2）在lib中导入jar包"><a href="#（2）在lib中导入jar包" class="headerlink" title="（2）在lib中导入jar包"></a>（2）在lib中导入jar包</h5><h5 id="3-在MySQL的jar包上右键选择-build-path-—-gt-add-to-build-path"><a href="#3-在MySQL的jar包上右键选择-build-path-—-gt-add-to-build-path" class="headerlink" title="(3)在MySQL的jar包上右键选择 build path —&gt; add to build path"></a>(3)在MySQL的jar包上右键选择 build path —&gt; add to build path</h5><h4 id="2-注册驱动"><a href="#2-注册驱动" class="headerlink" title="2.注册驱动"></a>2.注册驱动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="显示的加载到JVM中"><a href="#显示的加载到JVM中" class="headerlink" title="显示的加载到JVM中"></a>显示的加载到JVM中</h5><h4 id="3-获取连接"><a href="#3-获取连接" class="headerlink" title="3.获取连接"></a>3.获取连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String url = &quot;jdbc:mysql://127.0.0.1:3306/Schooldb&quot;;</span><br><span class="line">String userName = &quot;root&quot;;//MySQL配置时的用户名String password = &quot;111111&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-连接数据库"><a href="#4-连接数据库" class="headerlink" title="4.连接数据库"></a>4.连接数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DriverManager.getConnection(url, userName, password);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-执行SQL语句"><a href="#5-执行SQL语句" class="headerlink" title="5.执行SQL语句"></a>5.执行SQL语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Statement statement = conn.createStatement();String sql = &quot;select * from StudentInfo&quot;;ResultSet rs = statement.executeQuery(sql);</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-遍历结果集"><a href="#6-遍历结果集" class="headerlink" title="6.遍历结果集"></a>6.遍历结果集</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">while (rs.next()) &#123;    name = rs.getString(&quot;StudentName&quot;);    age = rs.getString(&quot;Age&quot;);    out.println(name + &quot;\t&quot; + age);&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-关闭对象"><a href="#7-关闭对象" class="headerlink" title="7.关闭对象"></a>7.关闭对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rs.close();conn.close();</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体代码如下："><a href="#具体代码如下：" class="headerlink" title="具体代码如下："></a>具体代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot;%&gt;&lt;%@ page import=&quot;java.sql.*&quot;%&gt;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;ISO-8859-1&quot;&gt;&lt;title&gt;Insert title here&lt;/title&gt;&lt;/head&gt;&lt;body&gt;	&lt;%		String driver = &quot;com.mysql.jdbc.Driver&quot;;    		String url = &quot;jdbc:mysql://127.0.0.1:3306/Schooldb&quot;;//url指向要访问的数据库名Schooldb(是你自己的数据库名)    		String userName = &quot;root&quot;;//MySQL配置时的用户名    		String password = &quot;111111&quot;;//Java连接MySQL配置时的密码		try &#123;			//1 加载驱动程序			Class.forName(driver);			//2 连接数据库			Connection conn = DriverManager.getConnection(url, userName, password);			//3 用来执行SQL语句			Statement statement = conn.createStatement();			//要执行的SQL语句 StudentInfo（自己要查询的数据表）			String sql = &quot;select * from StudentInfo&quot;;			ResultSet rs = statement.executeQuery(sql);            			String name = null;			String age = null;			while (rs.next()) &#123;                //StudentName、Age是自己数据表中的数据				name = rs.getString(&quot;StudentName&quot;);				age = rs.getString(&quot;Age&quot;);				out.println(name + &quot;\t&quot; + age);			&#125;			rs.close();			conn.close();		&#125; catch (ClassNotFoundException e) &#123;			System.out.println(&quot;Sorry,can`t find the Driver!&quot;);			e.printStackTrace();		&#125; catch (SQLException e) &#123;			e.printStackTrace();		&#125; catch (Exception e) &#123;			e.printStackTrace();		&#125;	%&gt;&lt;/body&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+            <br />
+            <p class="meta">
+                
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            
+
+<span><b>
+        TL;DR</b></span>
+<p>
+    Yet another hexo theme.
+</p>
+<hr />
+
+
+<span><b>
+        TL;DR 2</b></span>
+<p>
+    No, not another one :/
+</p>
+<hr />
+
+
+
+
+
+
+<span><a href="https://twitter.com/hexojs" target="_blank" rel="noopener"><b><i class="fab fa-twitter-square"></i>
+            <i class="fas fa-at"></i>
+            hexojs</b></a></span>
+<br />
+<a class="twitter-timeline" data-height="800" data-dnt="true" data-chrome="nofooter transparent noheader noborders "
+    href="https://twitter.com/hexojs?ref_src=twsrc%5Etfw"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+</div>
+<!-- Menu fade on scroll -->
+<script>
+    var isScrolling;
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#navbar").slideDown();
+            } else {
+                $("#navbar").slideUp();
+            }
+            prevScrollpos = currentScrollPos;
+        }, 66);
+    }, false);
+</script>
+
+<a class="float-left gradient btn paginationbtn" href="/2019/11/02/hexo博客常用插件及用法/"><i class="fas fa-chevron-left"></i></a>
+
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+  <div class="container">
+    <div class="social-icons">
+      
+      <a href="https://hexo.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      
+      <a href="https://twitter.com/hexojs" title="@hexojs" target="_blank" rel="noopener" class="fab fa-twitter"></a>
+      
+      <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
+      
+    </div>
+  </div>
+</footer>
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
