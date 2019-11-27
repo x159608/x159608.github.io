@@ -1,0 +1,184 @@
+<html>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+
+  
+  <title>
+    关于jQuery中“animate()”函数对颜色变化的支持 |
+    混世大魔王
+  </title>
+  
+
+
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <meta property="og:title" content="关于jQuery中“animate()”函数对颜色变化的支持">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="混世大魔王">
+  <meta property="og:image" content="http://yoursite.com/img/default.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content>
+  <meta name="twitter:title" content="关于jQuery中“animate()”函数对颜色变化的支持">
+
+  <meta name="twitter:image" content="http://yoursite.com/img/default.jpg">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/./css/style.css">
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+  <div class="container">
+    <a class="navbar-brand logo" href="http://yoursite.com">
+      混世大魔王</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item item">
+          
+        <li class="nav-item item">
+          <a class="nav-link" href="/">
+            Home</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="/archives">
+            🗂️Archives</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="https://hexo.io/">
+            Hexo</a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <main class="page main-page">
+        <div class="container blogPost">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="blog-post-title">
+                关于jQuery中“animate()”函数对颜色变化的支持
+            </h2>
+            <p class="meta"><i class="far fa-clock"></i>
+                2019-11-27
+                
+            </p>
+            <!-- Content -->
+            <p>我要做得就是让下面一段代码生效：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#yourid"</span>).stop().animate(&#123; <span class="string">"backgroundColor"</span> : <span class="string">"#rrggbb"</span>, <span class="string">"color"</span> : <span class="string">"#rrggbb"</span> &#125;, <span class="string">"fast"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>　　但是，很遗憾，一点也没有动。本来效果应该跟这个版本的xcoder博客的天头导航条一样有个动态效果（只不过xcoder的导航条是透明度变化，而项目中我想让它背景色变化）。</p>
+<p>　　原因是什么呢？死月上网查了很久，找到的东西都很简单地说明了一下，貌似都可以。嘛，也许是jQuery新版本不支持这个特性了吧。</p>
+<p>　　最后，死月在jQuery的官方文档中找到了下面这段话——</p>
+<blockquote>
+<p>All animated properties should be animated to <strong>a single numeric value\</strong>, except as noted below; most properties that are non-numeric cannot be animated using basic jQuery functionality (For example, width, height, or left can be animated but background-color cannot be, unless the <a href="https://github.com/jquery/jquery-color" target="_blank" rel="noopener">jQuery.Color()</a> plugin is used). Property values are treated as a number of pixels unless otherwise specified. The units em and % can be specified where applicable.</p>
+<p>—— <a href="http://api.jquery.com/animate/" target="_blank" rel="noopener">jQuery官方文档 .animate()</a></p>
+</blockquote>
+<p>　　大致的意思就是说所有动画属性都必须是一个单数字值，所以说大多数非数字的属性是不能被动画化的。例如高度、宽度等可以被动画化，但是背景色就不信了。<strong>除非你用了jQuery.Color()插件\</strong>。</p>
+<p>　　所以说问题找到了，我们必须得用一个jQuery.Color()插件来对一些颜色进行动画操作。</p>
+<p>　　话不多说，我们去下一个jQuery.Color()插件。把它加在我们的页面中，然后就可以用如下方式来进行动画操作了：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="keyword">this</span>).stop().animate(&#123;    <span class="string">"backgroundColor"</span> : jQuery.Color(<span class="string">"rrggbb"</span>),    <span class="string">"color"</span> : jQuery.Color(<span class="string">"rrggbb"</span>)&#125;, <span class="string">"fast"</span>);</span><br></pre></td></tr></table></figure>
+            <br />
+            <p class="meta">
+                
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            
+
+<span><b>
+        TL;DR</b></span>
+<p>
+    Yet another hexo theme.
+</p>
+<hr />
+
+
+<span><b>
+        TL;DR 2</b></span>
+<p>
+    No, not another one :/
+</p>
+<hr />
+
+
+
+
+
+
+<span><a href="https://twitter.com/hexojs" target="_blank" rel="noopener"><b><i class="fab fa-twitter-square"></i>
+            <i class="fas fa-at"></i>
+            hexojs</b></a></span>
+<br />
+<a class="twitter-timeline" data-height="800" data-dnt="true" data-chrome="nofooter transparent noheader noborders "
+    href="https://twitter.com/hexojs?ref_src=twsrc%5Etfw"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+</div>
+<!-- Menu fade on scroll -->
+<script>
+    var isScrolling;
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#navbar").slideDown();
+            } else {
+                $("#navbar").slideUp();
+            }
+            prevScrollpos = currentScrollPos;
+        }, 66);
+    }, false);
+</script>
+
+<a class="float-left gradient btn paginationbtn" href="/2019/11/27/JSP内置对象之request-response-out-1/"><i class="fas fa-chevron-left"></i></a>
+
+
+<a class="float-right gradient btn paginationbtn" href="/2019/11/27/EL表达式/"><i class="fas fa-chevron-right"></i></a>
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+  <div class="container">
+    <div class="social-icons">
+      
+      <a href="https://hexo.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      
+      <a href="https://twitter.com/hexojs" title="@hexojs" target="_blank" rel="noopener" class="fab fa-twitter"></a>
+      
+      <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
+      
+    </div>
+  </div>
+</footer>
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

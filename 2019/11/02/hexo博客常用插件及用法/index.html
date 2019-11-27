@@ -1,0 +1,288 @@
+<html>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+
+  
+  <title>
+    hexo博客常用插件及用法 |
+    混世大魔王
+  </title>
+  
+
+
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <meta property="og:title" content="hexo博客常用插件及用法">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="混世大魔王">
+  <meta property="og:image" content="http://yoursite.com/img/default.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content>
+  <meta name="twitter:title" content="hexo博客常用插件及用法">
+
+  <meta name="twitter:image" content="http://yoursite.com/img/default.jpg">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/./css/style.css">
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+  <div class="container">
+    <a class="navbar-brand logo" href="http://yoursite.com">
+      混世大魔王</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item item">
+          
+        <li class="nav-item item">
+          <a class="nav-link" href="/">
+            Home</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="/archives">
+            🗂️Archives</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="https://hexo.io/">
+            Hexo</a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <main class="page main-page">
+        <div class="container blogPost">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="blog-post-title">
+                hexo博客常用插件及用法
+            </h2>
+            <p class="meta"><i class="far fa-clock"></i>
+                2019-11-02
+                
+            </p>
+            <!-- Content -->
+            <h2 id="HEXO-AUTONOFOLLOW"><a href="#HEXO-AUTONOFOLLOW" class="headerlink" title="HEXO-AUTONOFOLLOW"></a>HEXO-AUTONOFOLLOW</h2><p>Github：<a href="https://github.com/liuzc/hexo-autonofollow" target="_blank" rel="noopener">https://github.com/liuzc/hexo-autonofollow</a></p>
+<p>简介：自动为站外链接添加nofollow属性</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-autonofollow --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nofollow:  enable: true  exclude:    - exclude1.com    - exclude2.com</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>enable</strong> - 是否启用</li>
+<li><strong>exclude</strong> - 排除域名</li>
+</ul>
+<h2 id="HEXO-BAIDU-URL-SUBMIT"><a href="#HEXO-BAIDU-URL-SUBMIT" class="headerlink" title="HEXO-BAIDU-URL-SUBMIT"></a>HEXO-BAIDU-URL-SUBMIT</h2><p>Github：<a href="https://github.com/huiwang/hexo-baidu-url-submit" target="_blank" rel="noopener">https://github.com/huiwang/hexo-baidu-url-submit</a></p>
+<p>简介：主动推送Hexo博客新链接至百度搜索引擎，解决百度爬虫被禁止访问的问题，提升网站收录质量和速度。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_url_submit:  count: 1 ## 提交最新的一个链接  host: blog.cofess.com ## 在百度站长平台中注册的域名  token: your_token ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>token</strong> - 您得注册百度站长工具，然后在<strong>工具-&gt;网页抓取-&gt;链接提交</strong>里找到你的密匙。</li>
+</ul>
+<p>其次，_config.ym文件中url的值， 必须是百度站长平台注册的域名， 比如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># URLurl: blog.cofess.comroot: /permalink: :year/:month/:day/:title/</span><br></pre></td></tr></table></figure>
+
+<p>最后，加入新的deployer:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:- type: baidu_url_submitter</span><br></pre></td></tr></table></figure>
+
+<p>执行<code>hexo deploy</code>的时候，新的链接就会被推送百度了。</p>
+<h2 id="HEXO-GENERATOR-FEED"><a href="#HEXO-GENERATOR-FEED" class="headerlink" title="HEXO-GENERATOR-FEED"></a>HEXO-GENERATOR-FEED</h2><p>Github：<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">https://github.com/hexojs/hexo-generator-feed</a></p>
+<p>简介：RSS的生成插件，你可以在配置显示你站点的RSS，文件路径\atom.xml。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feed:  type: atom  path: atom.xml  limit: 20  hub:  content:</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>type</strong> - Feed type. (atom/rss2)</li>
+<li><strong>path</strong> - Feed path. (Default: atom.xml/rss2.xml)</li>
+<li><strong>limit</strong> - Maximum number of posts in the feed (Use <code>0</code> or <code>false</code> to show all posts)</li>
+<li><strong>hub</strong> - URL of the PubSubHubbub hubs (Leave it empty if you don’t use it)</li>
+<li><strong>content</strong> - (optional) set to ‘true’ to include the contents of the entire post in the feed.</li>
+</ul>
+<h2 id="HEXO-GENERATOR-SITEMAP"><a href="#HEXO-GENERATOR-SITEMAP" class="headerlink" title="HEXO-GENERATOR-SITEMAP"></a>HEXO-GENERATOR-SITEMAP</h2><p>Github：<a href="https://github.com/hexojs/hexo-generator-sitemap" target="_blank" rel="noopener">https://github.com/hexojs/hexo-generator-sitemap</a></p>
+<p>简介：生成博客的sitemap。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sitemap:    path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<h2 id="HEXO-GENERATOR-BAIDU-SITEMAP"><a href="#HEXO-GENERATOR-BAIDU-SITEMAP" class="headerlink" title="HEXO-GENERATOR-BAIDU-SITEMAP"></a>HEXO-GENERATOR-BAIDU-SITEMAP</h2><p>Github：<a href="https://github.com/coneycode/hexo-generator-baidu-sitemap" target="_blank" rel="noopener">https://github.com/coneycode/hexo-generator-baidu-sitemap</a></p>
+<p>简介：生成博客的sitemap（针对百度）。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidusitemap:path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<h2 id="HEXO-GENERATOR-JSON-CONTENT"><a href="#HEXO-GENERATOR-JSON-CONTENT" class="headerlink" title="HEXO-GENERATOR-JSON-CONTENT"></a>HEXO-GENERATOR-JSON-CONTENT</h2><p>Github：<a href="https://github.com/alexbruno/hexo-generator-json-content" target="_blank" rel="noopener">https://github.com/alexbruno/hexo-generator-json-content</a></p>
+<p>简介：用于生成静态站点数据，提供搜索功能的数据源。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:  ignore:    - path/to/a/page    - url/to/one/post    - an-entire-category    - specific.file    - .ext # a file extension</span><br></pre></td></tr></table></figure>
+
+<h2 id="HEXO-NEAT"><a href="#HEXO-NEAT" class="headerlink" title="HEXO-NEAT"></a>HEXO-NEAT</h2><p>Github：<a href="https://github.com/rozbo/hexo-neat" target="_blank" rel="noopener">https://github.com/rozbo/hexo-neat</a></p>
+<p>简介：自动压缩html、css、js代码</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">neat_enable: true</span><br></pre></td></tr></table></figure>
+
+<p>压缩html代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">neat_html:  enable: true  exclude:</span><br></pre></td></tr></table></figure>
+
+<p>压缩CSS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">neat_css:  enable: true  exclude:    - &apos;*.min.css&apos;</span><br></pre></td></tr></table></figure>
+
+<p>压缩JS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">neat_js:  enable: true  mangle: true  output:  compress:  exclude:    - &apos;*.min.js&apos;</span><br></pre></td></tr></table></figure>
+
+<h2 id="HEXO-TRANSLATE-TITLE"><a href="#HEXO-TRANSLATE-TITLE" class="headerlink" title="HEXO-TRANSLATE-TITLE"></a>HEXO-TRANSLATE-TITLE</h2><p>Github：<a href="https://github.com/cometlj/hexo-translate-title" target="_blank" rel="noopener">https://github.com/cometlj/hexo-translate-title</a></p>
+<p>简介：使用Google翻译，百度翻译和有道翻译将Hexo文章中的汉字标题转成英文标题</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-translate-title --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>在博客配置文件<code>_config.yml</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">translate_title:  translate_way: google    #google | baidu | youdao  youdao_api_key: XXX  youdao_keyfrom: XXX  is_need_proxy: true     #true | false  proxy_url: http://localhost:4000</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：判断是否需要配置google本地代理，如果没有被墙，请将<code>_config.yml</code>下的<code>is_need_proxy: true</code>改为false。如果设置为true,请设置本地代理地址</p>
+<h2 id="HEXO-WORDCOUNT"><a href="#HEXO-WORDCOUNT" class="headerlink" title="HEXO-WORDCOUNT"></a>HEXO-WORDCOUNT</h2><p>Github：<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="noopener">https://github.com/willin/hexo-wordcount</a></p>
+<p>简介：为文章添加文章字数统计、文章预计阅读时间</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<p>通过以上安装后，你可以在你的模板文件加入以下相关的标签实现本插件的功能<br><strong>字数统计:</strong>WordCount<br><strong>阅读时长预计:</strong>Min2Read<br><strong>总字数统计:</strong> TotalCount</p>
+<h2 id="HEXO-GENERATOR-RESTFUL"><a href="#HEXO-GENERATOR-RESTFUL" class="headerlink" title="HEXO-GENERATOR-RESTFUL"></a>HEXO-GENERATOR-RESTFUL</h2><p>Github：<a href="https://github.com/yscoder/hexo-generator-restful" target="_blank" rel="noopener">https://github.com/yscoder/hexo-generator-restful</a></p>
+<p>简介：RESTful JSON数据生成插件。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-restful --save</span><br></pre></td></tr></table></figure>
+
+<p>配置：</p>
+<p>以下为默认配置，属性值为 <code>false</code> 表示不生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">restful:  # site 可配置为数组选择性生成某些属性  # site: [&apos;title&apos;, &apos;subtitle&apos;, &apos;description&apos;, &apos;author&apos;, &apos;since&apos;, email&apos;, &apos;favicon&apos;, &apos;avatar&apos;]  site: true        # hexo.config mix theme.config  posts_size: 10    # 文章列表分页，0 表示不分页  posts_props:      # 文章列表项的需要生成的属性    title: true    slug: true    date: true    updated: true    comments: true    path: true    excerpt: false    cover: true      # 封面图，取文章第一张图片    content: false    keywords: false    categories: true    tags: true  categories: true  # 分类数据  tags: true        # 标签数据  post: true        # 文章数据  pages: false      # 额外的 Hexo 页面数据, 如 About</span><br></pre></td></tr></table></figure>
+            <br />
+            <p class="meta">
+                
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            
+
+<span><b>
+        TL;DR</b></span>
+<p>
+    Yet another hexo theme.
+</p>
+<hr />
+
+
+<span><b>
+        TL;DR 2</b></span>
+<p>
+    No, not another one :/
+</p>
+<hr />
+
+
+
+
+
+
+<span><a href="https://twitter.com/hexojs" target="_blank" rel="noopener"><b><i class="fab fa-twitter-square"></i>
+            <i class="fas fa-at"></i>
+            hexojs</b></a></span>
+<br />
+<a class="twitter-timeline" data-height="800" data-dnt="true" data-chrome="nofooter transparent noheader noborders "
+    href="https://twitter.com/hexojs?ref_src=twsrc%5Etfw"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+</div>
+<!-- Menu fade on scroll -->
+<script>
+    var isScrolling;
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#navbar").slideDown();
+            } else {
+                $("#navbar").slideUp();
+            }
+            prevScrollpos = currentScrollPos;
+        }, 66);
+    }, false);
+</script>
+
+<a class="float-left gradient btn paginationbtn" href="/2019/11/02/使用Css获取用户密码/"><i class="fas fa-chevron-left"></i></a>
+
+
+<a class="float-right gradient btn paginationbtn" href="/2019/11/02/Tomcat下载安装及配置/"><i class="fas fa-chevron-right"></i></a>
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+  <div class="container">
+    <div class="social-icons">
+      
+      <a href="https://hexo.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      
+      <a href="https://twitter.com/hexojs" title="@hexojs" target="_blank" rel="noopener" class="fab fa-twitter"></a>
+      
+      <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
+      
+    </div>
+  </div>
+</footer>
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

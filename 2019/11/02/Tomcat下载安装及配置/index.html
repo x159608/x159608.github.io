@@ -1,0 +1,198 @@
+<html>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+
+  
+  <title>
+    Tomcat下载及安装配置 |
+    混世大魔王
+  </title>
+  
+
+
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <meta property="og:title" content="Tomcat下载及安装配置">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="混世大魔王">
+  <meta property="og:image" content="http://yoursite.com/img/default.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content>
+  <meta name="twitter:title" content="Tomcat下载及安装配置">
+
+  <meta name="twitter:image" content="http://yoursite.com/img/default.jpg">
+
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="/./css/style.css">
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark page-navbar gradient">
+  <div class="container">
+    <a class="navbar-brand logo" href="http://yoursite.com">
+      混世大魔王</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item item">
+          
+        <li class="nav-item item">
+          <a class="nav-link" href="/">
+            Home</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="/archives">
+            🗂️Archives</a>
+        </li>
+        
+        <li class="nav-item item">
+          <a class="nav-link" href="https://hexo.io/">
+            Hexo</a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <main class="page main-page">
+        <div class="container blogPost">
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="blog-post-title">
+                Tomcat下载及安装配置
+            </h2>
+            <p class="meta"><i class="far fa-clock"></i>
+                2019-11-02
+                
+            </p>
+            <!-- Content -->
+            <h2 id="1-首先，登录到Tomcat官方装包下载地址。"><a href="#1-首先，登录到Tomcat官方装包下载地址。" class="headerlink" title="1.首先，登录到Tomcat官方装包下载地址。"></a>1.首先，登录到Tomcat官方装包下载地址。</h2><p>1.在【Download】目录下，找到并点击合适版本的Tomcat。</p>
+<p><img src="https://i.loli.net/2019/11/02/2v1lHrhSJg4oVAY.png" alt="21a4462309f79052cbb9aea102f3d7ca7acbd58f.jpg"></p>
+<p>2.点击[tomcat8]后，根据自己电脑操作系统的位数，再选择右侧【core】下的压缩包进行下载，并保存。</p>
+<p><img src="https://i.loli.net/2019/11/02/lue8jA6pb79rof3.png" alt="377adab44aed2e73ae406eb38901a18b86d6fa80.jpg"></p>
+<p>3.因为下载的该压缩为免安装版Tomcat，下载完成后，将该<strong>压缩包解压</strong>即可。</p>
+<p>（记住该<strong>解压文件的存放位置</strong>，后面环境变量配置会用到）</p>
+<p><img src="https://i.loli.net/2019/11/02/mgnRhuEvfQZSOFi.png" alt="0b46f21fbe096b63a7748ccf02338744eaf8acc4.jpg"></p>
+<h2 id="2-环境变量配置"><a href="#2-环境变量配置" class="headerlink" title="2.环境变量配置"></a>2.环境变量配置</h2><p>1.鼠标右键点击【这台电脑】–&gt;选择【属性】-&gt;【高级系统设置】–&gt;【系统变量】。</p>
+<p><img src="https://i.loli.net/2019/11/02/V49j5xeuaTkAXUh.png" alt="5327ce160924ab1853053ba83bfae6cd7a890bdb.jpg"></p>
+<p><img src="https://i.loli.net/2019/11/02/rF9ipmXEwBWg43G.png" alt="d68b65cb0a46f21f971384ccf8246b600d33aecf.jpg"></p>
+<p>2.然后，点击“系统变量”框下的【新建】按钮。</p>
+<p>（1）新建CATALINA_BASE变量</p>
+<p>变量名：CATALINA_BASE</p>
+<p>变量值：C:\my\apache-tomcat-8.5.42-windows-x64\apache-tomcat-8.5.42</p>
+<p>（Tomcat安装位置，即刚刚解压文件夹下bin文件所在位置）</p>
+<p><img src="https://i.loli.net/2019/11/02/ZCj85eb4OGW6Bum.png" alt="f6428f8fa0ec08fa57f0d83857ee3d6d54fbda7a.jpg"></p>
+<p>（2）新建CATALINA_HOME变量</p>
+<p>变量名：CATALINA_HOME</p>
+<p>变量值：C:\my\apache-tomcat-8.5.42-windows-x64\apache-tomcat-8.5.42</p>
+<p><img src="https://i.loli.net/2019/11/06/Vh984LvPuzHTeiK.png" alt="1.png"></p>
+<p>（3）找到Path变量，点击编辑</p>
+<p>变量名：Path</p>
+<p>变量值： %CATALINA_HOME%\bin</p>
+<p><img src="https://i.loli.net/2019/11/06/abXIAMQL61Uefo2.png" alt="2.png"></p>
+<p>（不要删除原有path变量值，直接在最后一行添加上这一句即可）</p>
+<p>这样Tomcat就配置好了。打开cmd命令提示符，输入startup后回车，就可以看到Tomcat成功启动了。</p>
+<p><img src="https://i.loli.net/2019/11/02/WRgEArbHVB1m2oL.png" alt="8694a4c27d1ed21bb8a81465a36eddc450da3fc8.jpg"></p>
+
+            <br />
+            <p class="meta">
+                
+            </p>
+        </div>
+
+        <div class="col-sm-4">
+            
+
+<span><b>
+        TL;DR</b></span>
+<p>
+    Yet another hexo theme.
+</p>
+<hr />
+
+
+<span><b>
+        TL;DR 2</b></span>
+<p>
+    No, not another one :/
+</p>
+<hr />
+
+
+
+
+
+
+<span><a href="https://twitter.com/hexojs" target="_blank" rel="noopener"><b><i class="fab fa-twitter-square"></i>
+            <i class="fas fa-at"></i>
+            hexojs</b></a></span>
+<br />
+<a class="twitter-timeline" data-height="800" data-dnt="true" data-chrome="nofooter transparent noheader noborders "
+    href="https://twitter.com/hexojs?ref_src=twsrc%5Etfw"></a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+    </div>
+</div>
+<!-- Menu fade on scroll -->
+<script>
+    var isScrolling;
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener('scroll', function (event) {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#navbar").slideDown();
+            } else {
+                $("#navbar").slideUp();
+            }
+            prevScrollpos = currentScrollPos;
+        }, 66);
+    }, false);
+</script>
+
+<a class="float-left gradient btn paginationbtn" href="/2019/11/02/hexo博客常用插件及用法/"><i class="fas fa-chevron-left"></i></a>
+
+
+<a class="float-right gradient btn paginationbtn" href="/2019/11/10/JDBC连接数据库步骤/"><i class="fas fa-chevron-right"></i></a>
+
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+  <div class="container">
+    <div class="social-icons">
+      
+      <a href="https://hexo.io/" title="Hexo.io" target="_blank" rel="noopener" class="fas fa-home"></a>
+      
+      <a href="https://twitter.com/hexojs" title="@hexojs" target="_blank" rel="noopener" class="fab fa-twitter"></a>
+      
+      <a href="https://github.com/RandomAdversary/Gradient/issues" title="Report issue" target="_blank" rel="noopener" class="fas fa-bug"></a>
+      
+    </div>
+  </div>
+</footer>
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
